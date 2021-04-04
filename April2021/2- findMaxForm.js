@@ -30,8 +30,6 @@ const getResultIndex = (zerosAndOnes, zeros, ones) => {
 
 const getResult = (concatinated, resultIndexs) => {
   return resultIndexs.reduce((max, index) => {
-    if (concatinated[index].split(',').length - 1 > max)
-      console.log(concatinated[index]);
     return concatinated[index].split(',').length - 1 > max
       ? concatinated[index].split(',').length - 1
       : max;
@@ -50,3 +48,5 @@ const findMaxForm = (strs, zeros, ones) => {
   console.log(concatinated, zerosAndOnes, resultIndexs);
   return getResult(concatinated, resultIndexs);
 };
+
+console.log(findMaxForm(['10', '0001', '111001', '1', '0'], 5, 3));
