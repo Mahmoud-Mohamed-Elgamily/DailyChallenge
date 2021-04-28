@@ -11,7 +11,6 @@ var furthestBuilding = function (heights, bricks, ladders) {
     if (diff > 0) {
       if (diff > 0 && ladders) {
         queue.push(diff);
-        queue.sort((a, b) => a - b);
         ladders--;
       } else if (!ladders && (bricks - queue[0] >= 0 || bricks > diff)) {
         if (diff > queue[0]) {
